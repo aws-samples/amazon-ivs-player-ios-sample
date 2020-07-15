@@ -1,0 +1,11 @@
+# Bundler
+vendor/bundle/
+
+# CocoaPods
+Pods/
+
+# Xcode
+xcuserdata/
+
+# Mac/Finder
+*.DS_Store
