@@ -22,4 +22,4 @@ This repository contains sample apps which use the Amazon IVS Player iOS SDK.
 4. You can now build and run the projects in the simulator.
 
 ## License
-This sample code is made available under a modified MIT license. See the LICENSE file.
+This project is licensed under the MIT-0 License. See the LICENSE file.
