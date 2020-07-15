@@ -1,6 +1,10 @@
+<a href="https://docs.aws.amazon.com/ivs/"><img align="right" width="128px" src="./ivs-logo.svg"></a>
+
 # Amazon IVS Player iOS SDK Sample Apps
 
 This repository contains sample apps which use the Amazon IVS Player iOS SDK.
+
+## Samples
 
 + **BasicPlayback**: This is the most basic example of how to get started with the SDK.
 + **CustomUI**: This is a more advanced example that shows how to build a custom UI on top of the SDK.
