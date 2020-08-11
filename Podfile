@@ -4,7 +4,7 @@ workspace 'AmazonIVSPlayerSamples'
 
 # All of the following projects consume the AmazonIVSPlayer framework as clients
 abstract_target 'IVSClients' do
-    pod 'AmazonIVSPlayer', '1.0.0'
+    pod 'AmazonIVSPlayer', '1.0.6'
 
     target 'BasicPlayback' do
         project 'BasicPlayback/BasicPlayback.xcodeproj'
