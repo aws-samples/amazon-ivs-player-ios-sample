@@ -12,8 +12,8 @@ This repository contains sample apps which use the Amazon IVS Player iOS SDK.
 
 ## More Documentation
 
-+ [Release Notes](https://integ-docs-aws.amazon.com/ivs/latest/userguide/IVSPRN.html)
-+ [iOS SDK Guide](https://integ-docs-aws.amazon.com/ivs/latest/userguide/SIPAG.html)
++ [Release Notes](https://docs.aws.amazon.com/ivs/latest/userguide/IVSPRN.html)
++ [iOS SDK Guide](https://docs.aws.amazon.com/ivs/latest/userguide/SIPAG.html)
 
 ## Setup
 
