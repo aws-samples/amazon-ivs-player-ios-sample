@@ -159,6 +159,7 @@ class ViewController: UIViewController {
             position = playerPosition
             updateSeekSlider(position: position, duration: duration)
         }
+        guard position.seconds.isNormal else { return }
         currentPositionLabel.text = timeDisplayFormatter.string(from: position.seconds)
     }
 
