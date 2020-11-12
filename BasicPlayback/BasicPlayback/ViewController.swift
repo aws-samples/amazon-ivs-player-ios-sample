@@ -96,7 +96,7 @@ class ViewController: UIViewController {
     }
 
     @objc private func applicationDidBecomeActive(notification: Notification) {
-        if didPauseOnBackground {
+        if didPauseOnBackground && player?.error == nil {
             startPlayback()
             didPauseOnBackground = false
         }

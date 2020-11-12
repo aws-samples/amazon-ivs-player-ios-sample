@@ -327,7 +327,7 @@ extension MainViewController {
     @objc func applicationDidBecomeActive() {
         print("ℹ️ Application did become active")
         if #available(iOS 12.0, *) { isDarkMode = traitCollection.userInterfaceStyle == .dark }
-        if player?.state == .idle {
+        if player?.state == .idle && player?.error == nil {
             player?.play()
         }
     }
@@ -336,7 +336,7 @@ extension MainViewController {
         print("ℹ️ Application will enter foreground")
         playerView.player = player
         startPeriodicTimer()
-        if player?.state == .idle {
+        if player?.state == .idle && player?.error == nil {
             player?.play()
         }
     }
