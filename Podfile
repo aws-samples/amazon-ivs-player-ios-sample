@@ -4,7 +4,7 @@ workspace 'AmazonIVSPlayerSamples'
 
 # All of the following projects consume the AmazonIVSPlayer framework as clients
 abstract_target 'IVSClients' do
-    pod 'AmazonIVSPlayer', '~> 1.1.0'
+    pod 'AmazonIVSPlayer', '~> 1.2.0'
 
     target 'BasicPlayback' do
         project 'BasicPlayback/BasicPlayback.xcodeproj'
@@ -25,4 +25,4 @@ post_install do |installer|
     installer.pods_project.build_configurations.each do |configuration|
         configuration.build_settings['ARCHS[sdk=iphoneos*]'] = ['$(ARCHS_STANDARD)','arm64e']
     end
- end
+end
