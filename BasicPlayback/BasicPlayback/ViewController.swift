@@ -395,16 +395,6 @@ extension ViewController: IVSPlayer.Delegate {
         }
     }
 
-    func player(_ player: IVSPlayer, didOutputMetadataWithType type: String, content: Data) {
-        if type == "text/plain" {
-            guard let textData = String(data: content, encoding: .utf8) else {
-                print("Unable to parse metadata as string")
-                return
-            }
-            print("Received Timed Metadata: \(textData)")
-        }
-    }
-
     func playerWillRebuffer(_ player: IVSPlayer) {
         print("Player will rebuffer and resume playback")
     }
