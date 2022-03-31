@@ -16,6 +16,12 @@ class ViewController: UIViewController {
     @IBOutlet private var seekSlider: UISlider!
     @IBOutlet private var durationLabel: UILabel!
     @IBOutlet private var bufferedRangeProgressView: UIProgressView!
+    @IBOutlet private var pictureInPictureButton: UIButton!
+
+    private var pipPossibleObserver: NSKeyValueObservation?
+
+    @available(iOS 15, *)
+    private lazy var pipController: AVPictureInPictureController? = nil
 
     // MARK: IBAction
 
@@ -33,6 +39,10 @@ class ViewController: UIViewController {
 
     @IBAction private func pauseTapped(_ sender: Any) {
         pausePlayback()
+    }
+
+    @IBAction func pictureInPictureButtonPressed(_ sender: Any) {
+        pictureInPictureButtonPressed()
     }
 
     @IBAction private func onSeekSliderValueChanged(_ sender: UISlider, event: UIEvent) {
@@ -59,7 +69,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         connectProgress()
+        preparePictureInPicture()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -88,8 +100,10 @@ class ViewController: UIViewController {
 
     @objc private func applicationDidEnterBackground(notification: Notification) {
         if player?.state == .playing || player?.state == .buffering {
-            didPauseOnBackground = true
-            pausePlayback()
+            if !isPictureInPictureSupported {
+                didPauseOnBackground = true
+                pausePlayback()
+            }
         } else {
             didPauseOnBackground = false
         }
@@ -397,5 +411,65 @@ extension ViewController: IVSPlayer.Delegate {
 
     func playerWillRebuffer(_ player: IVSPlayer) {
         print("Player will rebuffer and resume playback")
+    }
+}
+
+// MARK: - Picture-In-Picture
+
+extension ViewController {
+
+    private var isPictureInPictureSupported: Bool {
+        if #available(iOS 15, *) {
+            return AVPictureInPictureController.isPictureInPictureSupported()
+        }
+
+        return false
+    }
+
+    private func preparePictureInPicture() {
+        guard #available(iOS 15, *), AVPictureInPictureController.isPictureInPictureSupported() else {
+            return
+        }
+
+        pictureInPictureButton.isHidden = false
+
+        if let existingController = self.pipController {
+            if existingController.ivsPlayerLayer == playerView.playerLayer {
+                return
+            }
+            self.pipController = nil
+        }
+
+        guard let pipController = AVPictureInPictureController(ivsPlayerLayer: playerView.playerLayer) else {
+            return
+        }
+
+        self.pipController = pipController
+        pipController.canStartPictureInPictureAutomaticallyFromInline = true
+
+        setUpPiPButton()
+
+        pipPossibleObserver = pipController.observe(\.isPictureInPicturePossible, options: [.initial, .new]) { [weak self] (pipController, change) in
+            self?.pictureInPictureButton.isEnabled = change.newValue ?? false
+        }
+    }
+
+    private func setUpPiPButton() {
+        let startImage = AVPictureInPictureController.pictureInPictureButtonStartImage(compatibleWith: pictureInPictureButton.traitCollection)
+        let stopImage = AVPictureInPictureController.pictureInPictureButtonStopImage(compatibleWith: pictureInPictureButton.traitCollection)
+        pictureInPictureButton.setImage(startImage, for: .normal)
+        pictureInPictureButton.setImage(stopImage, for: .selected)
+    }
+
+    private func pictureInPictureButtonPressed() {
+        guard #available(iOS 15, *), let pipController = pipController else {
+            return
+        }
+
+        if pipController.isPictureInPictureActive {
+            pipController.stopPictureInPicture()
+        } else {
+            pipController.startPictureInPicture()
+        }
     }
 }
