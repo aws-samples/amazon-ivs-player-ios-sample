@@ -20,8 +20,18 @@ class ViewController: UIViewController {
 
     private var pipPossibleObserver: NSKeyValueObservation?
 
+    // avoids "stored properties cannot be marked potentially unavailable" error
+    private var _pipController: Any? = nil
+
     @available(iOS 15, *)
-    private lazy var pipController: AVPictureInPictureController? = nil
+    private var pipController: AVPictureInPictureController? {
+        get {
+            return _pipController as! AVPictureInPictureController?
+        }
+        set {
+            _pipController = newValue
+        }
+    }
 
     // MARK: IBAction
 
