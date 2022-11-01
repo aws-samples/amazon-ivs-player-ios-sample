@@ -168,7 +168,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1410;
 				ORGANIZATIONNAME = "Amazon.com, Inc.";
 				TargetAttributes = {
 					46FE5A492419533500BC7CE4 = {
