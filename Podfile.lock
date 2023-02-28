@@ -1,16 +1,16 @@
 PODS:
-  - AmazonIVSPlayer (1.16.0)
+  - AmazonIVSPlayer (1.17.0)
 
 DEPENDENCIES:
-  - AmazonIVSPlayer (~> 1.16.0)
+  - AmazonIVSPlayer (~> 1)
 
 SPEC REPOS:
   trunk:
     - AmazonIVSPlayer
 
 SPEC CHECKSUMS:
-  AmazonIVSPlayer: e9092086094e70ba1e39b3f6f57f623da05b4b27
+  AmazonIVSPlayer: e64a0a905b60de5760a377eb256895cfae09c694
 
-PODFILE CHECKSUM: baf6dcd05b0893dda9ff156048a1b12fb3631f67
+PODFILE CHECKSUM: 101aeee6ba2da927ac84845be85f7183fa68ef59
 
 COCOAPODS: 1.11.3
