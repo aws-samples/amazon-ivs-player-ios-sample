@@ -37,7 +37,7 @@ class SourceViewController: UIViewController {
             videoSourceEntities = savedEntities
         } else {
             videoSourceEntities = [
-                SourceEntity("Pre-defined stream 1", "https://fcc3ddae59ed.us-west-2.playback.live-video.net/api/video/v1/us-west-2.893648527354.channel.xhP3ExfcX8ON.m3u8")
+                SourceEntity("Pre-defined stream 1", "https://4c62a87c1810.us-west-2.playback.live-video.net/api/video/v1/us-west-2.049054135175.channel.GHRwjPylmdXm.m3u8")
             ]
         }
     }
