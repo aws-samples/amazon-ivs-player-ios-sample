@@ -30,3 +30,28 @@ class AnswerButton: UIButton {
         self.setBackgroundImage(colorImage, for: forState)
     }
 }
+
+extension AnswerButton {
+    var answer: String {
+        return titleLabel!.text!
+    }
+
+    enum Style {
+        case correct
+        case incorrect
+        var color: UIColor {
+            switch self {
+            case .correct: 
+                return UIColor(named: "AnswerCorrect")!
+            case .incorrect:
+                return UIColor(named: "AnswerIncorrect")!
+            }
+        }
+    }
+
+    func applyStyle(_ style: Style) {
+        setBackgroundColor(style.color, forState: .normal)
+        setTitleColor(.white, for: .normal)
+        alpha = 0.3
+    }
+}
