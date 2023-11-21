@@ -87,15 +87,15 @@ class PlayerViewController: UIViewController {
 
     @objc func answerTapped(_ button: AnswerButton) {
         button.isSelected = true
-        UIView.animate(withDuration: 0.7, delay: 0, options: [.curveEaseInOut, .autoreverse], animations: { [weak self] in
-            if let title = button.titleLabel?.text, let question = self?.currentQuestion {
-                let isCorrect = title == question.answers[question.correctIndex]
-                button.setBackgroundColor(isCorrect ? UIColor(red: 0.15, green: 0.65, blue: 0.01, alpha: 1) : UIColor(red: 0.82, green: 0.2, blue: 0.07, alpha: 1), forState: .selected)
-            }
-            button.setTitleColor(.white, for: .normal)
-            button.alpha = 0.3
-            }, completion: { [weak self] (_) in
-                self?.hideQuestion()
+        guard let question = currentQuestion else { return }
+        let answerButtons = questionStackView.arrangedSubviews.map({ $0 as! AnswerButton })
+        let correctButton = answerButtons.first(where: { $0.answer == question.correctAnswer })
+        let incorrectSelectedButton = answerButtons.first(where: { $0.isSelected && $0.answer != question.correctAnswer })
+        UIView.animate(withDuration: 0.7, delay: 0, options: [.curveEaseInOut, .autoreverse], animations: {
+            correctButton?.applyStyle(.correct)
+            incorrectSelectedButton?.applyStyle(.incorrect)
+        }, completion: { [weak self] (_) in
+            self?.hideQuestion()
         })
     }
 

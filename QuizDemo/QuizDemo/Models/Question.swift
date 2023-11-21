@@ -11,3 +11,9 @@ struct Question: Decodable {
         self.correctIndex = correctIndex
     }
 }
+
+extension Question {
+    var correctAnswer: String {
+        return answers[correctIndex]
+    }
+}
