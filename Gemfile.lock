@@ -99,10 +99,11 @@ GEM
       rexml (~> 3.2.4)
 
 PLATFORMS
+  arm64-darwin-21
   ruby
 
 DEPENDENCIES
   cocoapods
 
 BUNDLED WITH
-   2.3.9
+   2.5.10
