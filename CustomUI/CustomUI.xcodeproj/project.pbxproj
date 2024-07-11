@@ -420,6 +420,7 @@
 			baseConfigurationReference = 1C4ABE3511883FBC45DA1AE7 /* Pods-IVSClients-CustomUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A2UWW5PJ4R;
 				INFOPLIST_FILE = CustomUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,6 +438,7 @@
 			baseConfigurationReference = 1DB364910D7FC186357C7F50 /* Pods-IVSClients-CustomUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A2UWW5PJ4R;
 				INFOPLIST_FILE = CustomUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
