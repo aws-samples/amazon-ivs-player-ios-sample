@@ -159,7 +159,7 @@ class MainViewController: UIViewController, SourceSelectViewDelegate {
             videoSourceEntities = savedEntities
         } else {
             videoSourceEntities = [
-                SourceEntity("Live stream Portrait", "https://fcc3ddae59ed.us-west-2.playback.live-video.net/api/video/v1/us-west-2.893648527354.channel.YtnrVcQbttF0.m3u8"),
+                SourceEntity("Live stream Landscape", "https://fcc3ddae59ed.us-west-2.playback.live-video.net/api/video/v1/us-west-2.893648527354.channel.DmumNckWFTqz.m3u8"),
                 SourceEntity("Recorded video Landscape", "https://d6hwdeiig07o4.cloudfront.net/ivs/956482054022/cTo5UpKS07do/2020-07-13T22-54-42.188Z/OgRXMLtq8M11/media/hls/master.m3u8")
             ]
         }
