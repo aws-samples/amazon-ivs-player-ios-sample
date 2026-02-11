@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0970C42F3C131000772F31 /* AmazonIVSPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 1C0970C32F3C131000772F31 /* AmazonIVSPlayer */; };
 		466CD24F241AF3E100A13A3F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CD24E241AF3E100A13A3F /* Question.swift */; };
 		466CD251241F85EC00A13A3F /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CD250241F85EC00A13A3F /* AnswerButton.swift */; };
 		46FE5A4E2419533500BC7CE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FE5A4D2419533500BC7CE4 /* AppDelegate.swift */; };
@@ -18,11 +19,9 @@
 		46FE5A662419902B00BC7CE4 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FE5A652419902B00BC7CE4 /* SourceViewController.swift */; };
 		46FE5A6824199F0000BC7CE4 /* SourceEntityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FE5A6724199F0000BC7CE4 /* SourceEntityCell.swift */; };
 		46FE5A6A241AE5E200BC7CE4 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FE5A69241AE5E200BC7CE4 /* UIView.swift */; };
-		5EE96B7EBB9EB51858F8AB2D /* libPods-IVSClients-QuizDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 899931624879D68F9328BBF9 /* libPods-IVSClients-QuizDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		28B6AD046E978757EACF512C /* Pods-IVSClients-QuizDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IVSClients-QuizDemo.debug.xcconfig"; path = "Target Support Files/Pods-IVSClients-QuizDemo/Pods-IVSClients-QuizDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		466CD24E241AF3E100A13A3F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		466CD250241F85EC00A13A3F /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		46FE5A4A2419533500BC7CE4 /* QuizDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,8 +35,6 @@
 		46FE5A652419902B00BC7CE4 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
 		46FE5A6724199F0000BC7CE4 /* SourceEntityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEntityCell.swift; sourceTree = "<group>"; };
 		46FE5A69241AE5E200BC7CE4 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		899931624879D68F9328BBF9 /* libPods-IVSClients-QuizDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IVSClients-QuizDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0CF69FB3ADB0D4B8DC6F65D /* Pods-IVSClients-QuizDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IVSClients-QuizDemo.release.xcconfig"; path = "Target Support Files/Pods-IVSClients-QuizDemo/Pods-IVSClients-QuizDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,21 +42,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE96B7EBB9EB51858F8AB2D /* libPods-IVSClients-QuizDemo.a in Frameworks */,
+				1C0970C42F3C131000772F31 /* AmazonIVSPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1BAB02E1EDE8953D87BAC1E6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				899931624879D68F9328BBF9 /* libPods-IVSClients-QuizDemo.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		466CD24B241AF2C500A13A3F /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,8 +63,6 @@
 			children = (
 				46FE5A4C2419533500BC7CE4 /* QuizDemo */,
 				46FE5A4B2419533500BC7CE4 /* Products */,
-				AE2DA0DB666F343FF0A5F81D /* Pods */,
-				1BAB02E1EDE8953D87BAC1E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,16 +116,6 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
-		AE2DA0DB666F343FF0A5F81D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				28B6AD046E978757EACF512C /* Pods-IVSClients-QuizDemo.debug.xcconfig */,
-				A0CF69FB3ADB0D4B8DC6F65D /* Pods-IVSClients-QuizDemo.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,11 +123,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46FE5A5E2419533600BC7CE4 /* Build configuration list for PBXNativeTarget "QuizDemo" */;
 			buildPhases = (
-				036024E33B5315271CB77551 /* [CP] Check Pods Manifest.lock */,
 				46FE5A462419533500BC7CE4 /* Sources */,
 				46FE5A472419533500BC7CE4 /* Frameworks */,
 				46FE5A482419533500BC7CE4 /* Resources */,
-				66CECCF1ACA493A78D0A1449 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 46FE5A412419533500BC7CE4;
+			packageReferences = (
+				1C0970C22F3C131000772F31 /* XCLocalSwiftPackageReference "../AmazonIVSPlayer" */,
+			);
 			productRefGroup = 46FE5A4B2419533500BC7CE4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -206,48 +184,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		036024E33B5315271CB77551 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-IVSClients-QuizDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		66CECCF1ACA493A78D0A1449 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IVSClients-QuizDemo/Pods-IVSClients-QuizDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IVSClients-QuizDemo/Pods-IVSClients-QuizDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IVSClients-QuizDemo/Pods-IVSClients-QuizDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		46FE5A462419533500BC7CE4 /* Sources */ = {
@@ -407,7 +343,6 @@
 		};
 		46FE5A5F2419533600BC7CE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28B6AD046E978757EACF512C /* Pods-IVSClients-QuizDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QuizDemo/Info.plist;
@@ -424,7 +359,6 @@
 		};
 		46FE5A602419533600BC7CE4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0CF69FB3ADB0D4B8DC6F65D /* Pods-IVSClients-QuizDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QuizDemo/Info.plist;
@@ -461,6 +395,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		1C0970C22F3C131000772F31 /* XCLocalSwiftPackageReference "../AmazonIVSPlayer" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../AmazonIVSPlayer;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C0970C32F3C131000772F31 /* AmazonIVSPlayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AmazonIVSPlayer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46FE5A422419533500BC7CE4 /* Project object */;
 }

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0970C12F3C130100772F31 /* AmazonIVSPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 1C0970C02F3C130100772F31 /* AmazonIVSPlayer */; };
 		4641CC2E2404AB3B00C6DD1E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641CC2D2404AB3B00C6DD1E /* UIColor.swift */; };
 		4641CC332405DA0200C6DD1E /* SourceSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641CC322405DA0200C6DD1E /* SourceSelectViewController.swift */; };
 		4641CC3524072E5D00C6DD1E /* SourceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4641CC3424072E5D00C6DD1E /* SourceEntity.swift */; };
@@ -17,7 +18,6 @@
 		46C1046523EDEA9C006D06F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46C1046323EDEA9C006D06F5 /* Main.storyboard */; };
 		46C1046723EDEA9D006D06F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46C1046623EDEA9D006D06F5 /* Assets.xcassets */; };
 		46C1046A23EDEA9D006D06F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46C1046823EDEA9D006D06F5 /* LaunchScreen.storyboard */; };
-		D38DBE4AFD022C7560636482 /* libPods-IVSClients-CustomUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BD44F1A53D72F86AA989E9 /* libPods-IVSClients-CustomUI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,8 +34,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1C4ABE3511883FBC45DA1AE7 /* Pods-IVSClients-CustomUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IVSClients-CustomUI.debug.xcconfig"; path = "Target Support Files/Pods-IVSClients-CustomUI/Pods-IVSClients-CustomUI.debug.xcconfig"; sourceTree = "<group>"; };
-		1DB364910D7FC186357C7F50 /* Pods-IVSClients-CustomUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IVSClients-CustomUI.release.xcconfig"; path = "Target Support Files/Pods-IVSClients-CustomUI/Pods-IVSClients-CustomUI.release.xcconfig"; sourceTree = "<group>"; };
 		4641CC2D2404AB3B00C6DD1E /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		4641CC322405DA0200C6DD1E /* SourceSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceSelectViewController.swift; sourceTree = "<group>"; };
 		4641CC3424072E5D00C6DD1E /* SourceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEntity.swift; sourceTree = "<group>"; };
@@ -48,7 +46,6 @@
 		46C1046623EDEA9D006D06F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46C1046923EDEA9D006D06F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46C1046B23EDEA9D006D06F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9BD44F1A53D72F86AA989E9 /* libPods-IVSClients-CustomUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IVSClients-CustomUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D38DBE4AFD022C7560636482 /* libPods-IVSClients-CustomUI.a in Frameworks */,
+				1C0970C12F3C130100772F31 /* AmazonIVSPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +101,6 @@
 			children = (
 				46C1045C23EDEA9C006D06F5 /* CustomUI */,
 				46C1045B23EDEA9C006D06F5 /* Products */,
-				95BBB2CCDD1B45B87BF2D4E8 /* Pods */,
-				5D4C33B914E8B13843EE3DD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,24 +126,6 @@
 			path = CustomUI;
 			sourceTree = "<group>";
 		};
-		5D4C33B914E8B13843EE3DD4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C9BD44F1A53D72F86AA989E9 /* libPods-IVSClients-CustomUI.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		95BBB2CCDD1B45B87BF2D4E8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1C4ABE3511883FBC45DA1AE7 /* Pods-IVSClients-CustomUI.debug.xcconfig */,
-				1DB364910D7FC186357C7F50 /* Pods-IVSClients-CustomUI.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,12 +133,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46C1046E23EDEA9D006D06F5 /* Build configuration list for PBXNativeTarget "CustomUI" */;
 			buildPhases = (
-				66E3CAA36A2B07055938A786 /* [CP] Check Pods Manifest.lock */,
 				46C1045623EDEA9C006D06F5 /* Sources */,
 				46C1045723EDEA9C006D06F5 /* Frameworks */,
 				46C1045823EDEA9C006D06F5 /* Resources */,
 				46C1047723EE08A2006D06F5 /* Embed Frameworks */,
-				56D2639CC17390AB60FC1143 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +171,9 @@
 				Base,
 			);
 			mainGroup = 46C1045123EDEA9C006D06F5;
+			packageReferences = (
+				1C0970BF2F3C130100772F31 /* XCLocalSwiftPackageReference "../AmazonIVSPlayer" */,
+			);
 			productRefGroup = 46C1045B23EDEA9C006D06F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -217,48 +195,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		56D2639CC17390AB60FC1143 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IVSClients-CustomUI/Pods-IVSClients-CustomUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IVSClients-CustomUI/Pods-IVSClients-CustomUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IVSClients-CustomUI/Pods-IVSClients-CustomUI-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		66E3CAA36A2B07055938A786 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-IVSClients-CustomUI-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		46C1045623EDEA9C006D06F5 /* Sources */ = {
@@ -417,7 +353,6 @@
 		};
 		46C1046F23EDEA9D006D06F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C4ABE3511883FBC45DA1AE7 /* Pods-IVSClients-CustomUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CustomUI/Info.plist;
@@ -434,7 +369,6 @@
 		};
 		46C1047023EDEA9D006D06F5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DB364910D7FC186357C7F50 /* Pods-IVSClients-CustomUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CustomUI/Info.plist;
@@ -471,6 +405,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		1C0970BF2F3C130100772F31 /* XCLocalSwiftPackageReference "../AmazonIVSPlayer" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../AmazonIVSPlayer;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C0970C02F3C130100772F31 /* AmazonIVSPlayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AmazonIVSPlayer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46C1045223EDEA9C006D06F5 /* Project object */;
 }
