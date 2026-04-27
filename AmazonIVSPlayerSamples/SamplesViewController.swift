@@ -28,6 +28,11 @@ class SamplesViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.barStyle = .default
+    }
+
     // MARK: - UITableViewDataSource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,6 +61,9 @@ class SamplesViewController: UITableViewController {
         let sample = samples[indexPath.row]
         let storyboard = UIStoryboard(name: sample.storyboardName, bundle: nil)
         guard let vc = storyboard.instantiateInitialViewController() else { return }
+        vc.title = sample.title
+        navigationController?.navigationBar.barStyle = .black
+
         show(vc, sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }

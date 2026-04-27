@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let navigationController = UINavigationController(rootViewController: SamplesViewController())
+        let navigationController = SamplesNavigationController(rootViewController: SamplesViewController())
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
@@ -31,4 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return .all
     }
+}
+
+class SamplesNavigationController: UINavigationController {
+    override var childForStatusBarStyle: UIViewController? { topViewController }
 }
