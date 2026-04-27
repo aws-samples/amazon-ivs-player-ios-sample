@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24B-r6-cs0">
-                                        <rect key="frame" x="354" y="52" width="44" height="44"/>
+                                        <rect key="frame" x="354" y="112" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="VYb-wC-9dS"/>
                                             <constraint firstAttribute="width" constant="44" id="ZiO-Qc-Lae"/>
@@ -135,7 +135,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="24B-r6-cs0" secondAttribute="top" constant="44" id="4OV-mJ-Ofg"/>
+                            <constraint firstItem="24B-r6-cs0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="4OV-mJ-Ofg"/>
                             <constraint firstAttribute="bottom" secondItem="f2Y-qt-rM4" secondAttribute="bottom" id="6Bm-u8-aXD"/>
                             <constraint firstItem="QoM-iF-wjA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7Gm-d6-yz9"/>
                             <constraint firstItem="QoM-iF-wjA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7ja-Y0-fnV"/>
