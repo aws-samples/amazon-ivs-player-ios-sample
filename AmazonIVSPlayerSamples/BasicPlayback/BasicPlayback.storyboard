@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Basic Playback View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="BasicPlaybackViewController" customModule="AmazonIVSPlayerSamples" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24B-r6-cs0">
-                                        <rect key="frame" x="354" y="44" width="44" height="44"/>
+                                        <rect key="frame" x="354" y="52" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="VYb-wC-9dS"/>
                                             <constraint firstAttribute="width" constant="44" id="ZiO-Qc-Lae"/>
@@ -35,7 +35,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="24B-r6-cs0" secondAttribute="trailing" constant="16" id="BFw-kO-hdH"/>
-                                    <constraint firstItem="24B-r6-cs0" firstAttribute="top" secondItem="f2Y-qt-rM4" secondAttribute="top" constant="44" id="Huf-SH-ZdM"/>
                                 </constraints>
                             </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="QoM-iF-wjA">
@@ -43,10 +42,10 @@
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOT-VF-Hcz">
-                                <rect key="frame" x="0.0" y="692" width="414" height="170"/>
+                                <rect key="frame" x="0.0" y="654" width="414" height="174"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d69-Xw-JWs">
-                                        <rect key="frame" x="188.5" y="106" width="37" height="34"/>
+                                        <rect key="frame" x="188.5" y="110" width="37" height="34"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Play">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,7 +55,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZq-R2-BG9">
-                                        <rect key="frame" x="180.5" y="106" width="53" height="34"/>
+                                        <rect key="frame" x="180.5" y="110" width="53" height="34"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <state key="normal" title="Pause">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iz9-F7-rBi">
-                                        <rect key="frame" x="342" y="74" width="56" height="32"/>
+                                        <rect key="frame" x="342" y="78" width="56" height="32"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="Quality">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,7 +75,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRG-s2-nGp">
-                                        <rect key="frame" x="16" y="74" width="30" height="32"/>
+                                        <rect key="frame" x="16" y="78" width="30" height="32"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="1.0">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,11 +85,11 @@
                                         </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ena-WX-NCg">
-                                        <rect key="frame" x="16" y="50" width="382" height="4"/>
+                                        <rect key="frame" x="16" y="52" width="382" height="4"/>
                                         <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </progressView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="U4G-Yk-Kzb">
-                                        <rect key="frame" x="14" y="36" width="386" height="31"/>
+                                        <rect key="frame" x="16" y="36" width="382" height="34"/>
                                         <connections>
                                             <action selector="onSeekSliderValueChanged:event:" destination="BYZ-38-t0r" eventType="valueChanged" id="8cc-vb-HdR"/>
                                         </connections>
@@ -136,6 +135,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="24B-r6-cs0" secondAttribute="top" constant="44" id="4OV-mJ-Ofg"/>
                             <constraint firstAttribute="bottom" secondItem="f2Y-qt-rM4" secondAttribute="bottom" id="6Bm-u8-aXD"/>
                             <constraint firstItem="QoM-iF-wjA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7Gm-d6-yz9"/>
                             <constraint firstItem="QoM-iF-wjA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7ja-Y0-fnV"/>
