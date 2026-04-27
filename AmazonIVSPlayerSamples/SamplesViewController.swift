@@ -2,6 +2,12 @@ import UIKit
 
 class SamplesViewController: UITableViewController {
 
+    init() {
+        super.init(style: .insetGrouped)
+    }
+
+    required init?(coder: NSCoder) { fatalError() }
+
     private struct Sample {
         let title: String
         let subtitle: String
