@@ -3,6 +3,7 @@ import UIKit
 class SourceTableViewCell: UITableViewCell {
 
     static let reuseIdentifier = "SourceTableViewCell"
+    static let textColor = UIColor(red: 0.973, green: 0.6, blue: 0.114, alpha: 1)
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
@@ -18,7 +19,7 @@ class SourceTableViewCell: UITableViewCell {
 
     func configure(with source: Source) {
         textLabel?.text = source.title
-        textLabel?.textColor = UIColor(red: 0.973, green: 0.6, blue: 0.114, alpha: 1)
+        textLabel?.textColor = Self.textColor
         backgroundColor = UIColor(red: 0.455, green: 0.455, blue: 0.502, alpha: 0.18)
         let backView = UIView()
         backView.backgroundColor = UIColor(red: 1, green: 0.6, blue: 0, alpha: 1)

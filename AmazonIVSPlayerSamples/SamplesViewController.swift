@@ -42,15 +42,10 @@ class SamplesViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         let sample = samples[indexPath.row]
-        if #available(iOS 14.0, *) {
-            var config = cell.defaultContentConfiguration()
-            config.text = sample.title
-            config.secondaryText = sample.subtitle
-            cell.contentConfiguration = config
-        } else {
-            cell.textLabel?.text = sample.title
-            cell.detailTextLabel?.text = sample.subtitle
-        }
+        var config = cell.defaultContentConfiguration()
+        config.text = sample.title
+        config.secondaryText = sample.subtitle
+        cell.contentConfiguration = config
         cell.accessoryType = .disclosureIndicator
         return cell
     }

@@ -111,7 +111,7 @@ extension QuizDemoSourceViewController: UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? SourceTableViewCell {
-            cell.textLabel?.textColor = UIColor(red: 1, green: 0.6, blue: 0, alpha: 1)
+            cell.textLabel?.textColor = SourceTableViewCell.textColor
         }
     }
 
