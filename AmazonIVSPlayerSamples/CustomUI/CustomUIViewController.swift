@@ -36,6 +36,13 @@ class CustomUIViewController: UIViewController, CustomUISourceViewDelegate {
         applyStyleToControlsView()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        player?.pause()
+        periodicTimer?.invalidate()
+        NotificationCenter.default.removeObserver(self)
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         createAppLifetimeNotificationObservers()
