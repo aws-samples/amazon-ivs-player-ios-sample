@@ -1,10 +1,8 @@
 import UIKit
 import AVFoundation
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -14,12 +12,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             print("‼️ Could not setup AVAudioSession: \(error)")
         }
-
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        let navigationController = SamplesNavigationController(rootViewController: SamplesViewController())
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
-        self.window = window
 
         return true
     }
